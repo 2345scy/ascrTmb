@@ -319,7 +319,7 @@ fit.ascr.tmb = function(capt, traps, mask, detfn = NULL, sv = NULL, bounds = NUL
     map[[par_name]] = factor(rep(NA, length(parameters[[par_name]])))
   }
 
-  dyn.load(TMB::dynlib("./src/ascrTmb"))
+  #dyn.load(TMB::dynlib("./src/ascrTmb"))
 
   if(!("ss.het" %in% bucket_info)){
     obj <- TMB::MakeADFun(data = data, parameters = parameters, map = map, DLL="ascrTmb")
